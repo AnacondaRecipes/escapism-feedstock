@@ -10,16 +10,15 @@ source:
 
 build:
   number: 0
-  noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python
     - setuptools
     - pip
   run:
-    - python >={{ python_min }}
+    - python
 
 test:
   imports:
@@ -28,14 +27,20 @@ test:
     - pip check
   requires:
     - pip
-    - python {{ python_min }}
+    - python
 
 about:
   home: https://github.com/minrk/escapism
+  dev_url: https://github.com/minrk/escapism
+  doc_url: https://pypi.org/project/escapism/
   license: MIT
   license_family: MIT
   license_file: LICENSE
   summary: Simple, generic API for escaping strings
+  description: |
+    Escapism is a small library that offers a simple, generic API for escaping
+    strings so they are safe to use in contexts such as URLs, filenames, or
+    other structured text.
 
 extra:
   recipe-maintainers:
