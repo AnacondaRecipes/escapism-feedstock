@@ -9,7 +9,7 @@ source:
   sha256: add130e48a85bb1aaea3e74fb031f5033c7055aedb39a3265f923d5f40c3f974
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
@@ -30,8 +30,8 @@ test:
     - python
 
 about:
-  home: https://github.com/minrk/escapism
-  dev_url: https://github.com/minrk/escapism
+  home: https://github.com/jupyterhub/escapism
+  dev_url: https://github.com/jupyterhub/escapism
   doc_url: https://pypi.org/project/escapism/
   license: MIT
   license_family: MIT
